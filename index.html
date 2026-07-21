@@ -243,18 +243,18 @@ Learning Licence Apply
 </div>
 
 <input
-id="name"
-type="text"
-placeholder="Enter Full Name"
-autocomplete="name"
-style="text-transform:uppercase;">
+id="applicationno"
+type="tel"
+inputmode="numeric"
+maxlength="16"
+placeholder="Enter Application Number">
 
 <input
 id="password"
-type="tel"
-inputmode="numeric"
-maxlength="12"
-placeholder="Enter Password">
+type="text"
+placeholder="Enter Password"
+autocomplete="password"
+style="text-transform:uppercase;">
 
 <input
 id="dob"
@@ -263,12 +263,6 @@ inputmode="numeric"
 maxlength="10"
 placeholder="Enter DOB (DD/MM/YYYY)">
 
-<input
-id="utr"
-type="tel"
-inputmode="numeric"
-maxlength="12"
-placeholder="Enter UTR Number">
 
 <button id="pay">
 💳 Pay ₹90
@@ -293,7 +287,7 @@ window.location.href =
 "upi://pay?pa=9236414171@pz&pn=AINEX%20SERVICES&am=90&cu=INR";
 });
 
-// NAME AUTO CAPITAL
+// A AUTO CAPITAL
 const nameInput = document.getElementById("name");
 nameInput.addEventListener("input", function () {
 this.value = this.value.toUpperCase();
