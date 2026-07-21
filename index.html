@@ -5,14 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Learning Licence Apply | BY AINEX SERVICES</title>
+<title>Learning Licence Apply | AINEX SERVICES</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 /* PART 2 CSS YAHAN PASTE KARNA */
-*{
+  *{
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -20,31 +19,35 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0a57ff,#00a9ff);
-padding:25px;
+background:linear-gradient(135deg,#0052D4,#4364F7,#6FB1FC);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
 }
 
-/* Floating WhatsApp Button */
+/* WhatsApp Button */
+
 .support-btn{
 position:fixed;
 top:18px;
 right:18px;
-width:56px;
-height:56px;
+width:58px;
+height:58px;
 background:#25D366;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-text-decoration:none;
-box-shadow:0 8px 20px rgba(0,0,0,.25);
-z-index:9999;
+box-shadow:0 8px 25px rgba(0,0,0,.25);
 transition:.3s;
+z-index:999;
+text-decoration:none;
 }
 
 .support-btn:hover{
 transform:scale(1.08);
-background:#1EBE57;
 }
 
 .support-btn svg{
@@ -53,64 +56,89 @@ height:30px;
 fill:#fff;
 }
 
+/* Card */
+
 .card{
+width:100%;
 max-width:500px;
-margin:auto;
 background:#fff;
-border-radius:22px;
+border-radius:25px;
 overflow:hidden;
-box-shadow:0 15px 40px rgba(0,0,0,.25);
+box-shadow:0 18px 45px rgba(0,0,0,.25);
+animation:fade .5s ease;
 }
 
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* Header */
+
 .header{
-padding:30px;
+background:linear-gradient(135deg,#0052D4,#007BFF);
+padding:35px 20px;
 text-align:center;
 color:#fff;
-background:linear-gradient(135deg,#004cff,#0099ff);
 }
 
 .header h1{
-font-size:28px;
+font-size:30px;
 font-weight:700;
 }
 
 .badge{
 display:inline-block;
-margin-top:10px;
-padding:8px 18px;
+margin-top:12px;
 background:#fff;
-color:#0057ff;
-border-radius:20px;
+color:#0052D4;
+padding:9px 20px;
+border-radius:50px;
+font-size:15px;
 font-weight:600;
 }
 
+/* Content */
+
 .content{
-padding:24px;
+padding:25px;
 }
 
 .content h2{
+font-size:25px;
 margin-bottom:10px;
 color:#222;
 }
 
 .content p{
-margin-bottom:15px;
-color:#555;
+color:#666;
 line-height:1.7;
+margin-bottom:18px;
 }
 
+/* Price */
+
 .price{
-margin:20px 0;
+background:#EAFBF0;
+border:2px dashed #25D366;
 padding:18px;
-text-align:center;
 border-radius:15px;
-background:#eafbf0;
-border:2px dashed #18a84a;
+text-align:center;
+margin-bottom:20px;
 }
 
 .price h3{
-font-size:40px;
-color:#18a84a;
+font-size:42px;
+color:#25D366;
 font-weight:700;
 }
 
@@ -119,62 +147,101 @@ margin-top:6px;
 font-size:16px;
 }
 
+/* Inputs */
+
 input{
 width:100%;
-padding:14px;
-margin-top:14px;
-border:1px solid #ccc;
-border-radius:10px;
-font-size:15px;
+padding:15px;
+margin-top:15px;
+border:2px solid #ddd;
+border-radius:12px;
+font-size:16px;
 outline:none;
 transition:.3s;
 }
 
 input:focus{
-border-color:#0057ff;
-box-shadow:0 0 8px rgba(0,87,255,.25);
+border-color:#0052D4;
+box-shadow:0 0 10px rgba(0,82,212,.2);
+}
+
+/* Buttons */
+
+.btn-group{
+margin-top:20px;
 }
 
 button{
 width:100%;
 padding:15px;
-margin-top:15px;
 border:none;
-border-radius:10px;
+border-radius:12px;
 font-size:17px;
 font-weight:700;
 cursor:pointer;
-color:#fff;
 transition:.3s;
+margin-top:12px;
 }
 
 #pay{
-background:#ff6b00;
+background:#ff7a00;
+color:#fff;
 }
 
 #pay:hover{
-background:#e85b00;
+background:#e76d00;
 }
 
 #send{
 background:#25D366;
+color:#fff;
 }
 
 #send:hover{
-background:#1EBE57;
+background:#18b956;
 }
 
-@media(max-width:500px){
+/* Footer */
+
+.footer{
+padding:20px;
+background:#f7f7f7;
+text-align:center;
+font-size:14px;
+color:#555;
+}
+
+.footer p{
+margin:5px 0;
+}
+
+/* Mobile */
+
+@media(max-width:600px){
 
 body{
-padding:15px;
+padding:12px;
+}
+
+.header{
+padding:28px 15px;
+}
+
+.header h1{
+font-size:24px;
+}
+
+.content h2{
+font-size:22px;
+}
+
+.price h3{
+font-size:36px;
 }
 
 .support-btn{
-top:12px;
-right:12px;
-width:50px;
-height:50px;
+width:52px;
+height:52px;
 }
 
 .support-btn svg{
@@ -182,34 +249,21 @@ width:26px;
 height:26px;
 }
 
-.header h1{
-font-size:24px;
-}
-
-.price h3{
-font-size:34px;
-}
-
-}
-
+  }
 </style>
 
 </head>
 
 <body>
 
-<!-- Floating WhatsApp Support Button -->
-<a
-href="https://wa.me/919236414171?text=Hello%20AINEX%20SERVICES,%20I%20need%20support."
+<!-- WhatsApp Support -->
+<a href="https://wa.me/919236414171?text=Hello%20AINEX%20SERVICES,%20I%20need%20support."
 class="support-btn"
 target="_blank"
 title="WhatsApp Support">
 
 <svg xmlns="http://www.w3.org/2000/svg"
-width="28"
-height="28"
-viewBox="0 0 32 32"
-fill="#ffffff">
+viewBox="0 0 32 32">
 
 <path d="M19.11 17.21c-.29-.15-1.71-.84-1.98-.93-.26-.1-.45-.15-.64.15-.19.29-.74.93-.91 1.12-.17.19-.34.22-.63.07-.29-.15-1.23-.45-2.35-1.44-.87-.77-1.46-1.72-1.63-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.55-.88-2.12-.23-.55-.47-.47-.64-.48h-.55c-.19 0-.48.07-.74.36-.26.29-.99.97-.99 2.37s1.02 2.75 1.16 2.94c.15.19 2.01 3.06 4.87 4.29.68.29 1.21.46 1.63.59.68.22 1.3.19 1.79.12.55-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z"/>
 
@@ -223,7 +277,7 @@ fill="#ffffff">
 
 <div class="header">
 
-<h1>BY AINEX SERVICES</h1>
+<h1>AINEX SERVICES</h1>
 
 <div class="badge">
 Learning Licence Apply
@@ -233,9 +287,11 @@ Learning Licence Apply
 
 <div class="content">
 
-<h2>🚗 Learning Licence</h2>
+<h2>🚗 Learning Licence Apply</h2>
 
-<p>Fill all details carefully.</p>
+<p>
+Enter your Learning Licence details carefully and submit after payment.
+</p>
 
 <div class="price">
 <h3>₹90</h3>
@@ -245,32 +301,30 @@ Learning Licence Apply
 <input
 id="applicationno"
 type="tel"
-inputmode="numeric"
 maxlength="16"
-placeholder="Enter Application Number">
+inputmode="numeric"
+placeholder="Application Number">
 
 <input
 id="password"
 type="text"
-placeholder="Enter Password"
-autocomplete="password"
-style="text-transform:uppercase;">
+placeholder="Password"
+autocomplete="off">
 
 <input
 id="dob"
 type="tel"
-inputmode="numeric"
 maxlength="10"
-placeholder="Enter DOB (DD/MM/YYYY)">
+inputmode="numeric"
+placeholder="DOB (DD/MM/YYYY)">
 
+<div class="btn-group">
 
 <button id="pay">
 💳 Pay ₹90
 </button>
 
-<button
-id="send"
-onclick="sendWA()">
+<button id="send" onclick="sendWA()">
 📩 Submit
 </button>
 
@@ -278,120 +332,130 @@ onclick="sendWA()">
 
 </div>
 
-<script>
+<div class="footer">
 
+<p>
+Powered By <b>AINEX SERVICES</b>
+</p>
+
+<p>
+WhatsApp Support : <b>9236414171</b>
+</p>
+
+</div>
+
+</div>
+
+<script>
 /* PART 3 JAVASCRIPT YAHAN PASTE KARNA */
+  // =============================
+// AINEX SERVICES - JAVASCRIPT
+// =============================
+
 // Pay Button
 document.getElementById("pay").addEventListener("click", function () {
-window.location.href =
-"upi://pay?pa=9236414171@pz&pn=AINEX%20SERVICES&am=90&cu=INR";
+
+    window.location.href =
+    "upi://pay?pa=9236414171@pz&pn=AINEX%20SERVICES&am=90&cu=INR";
+
 });
 
-// A AUTO CAPITAL
-const nameInput = document.getElementById("name");
-nameInput.addEventListener("input", function () {
-this.value = this.value.toUpperCase();
+// Application Number (Only Numbers)
+const appNo = document.getElementById("applicationno");
+
+appNo.addEventListener("input", function () {
+
+    this.value = this.value.replace(/\D/g, "").slice(0, 16);
+
 });
 
-// MOBILE AUTO NEXT
-const mobile = document.getElementById("mobile");
-mobile.addEventListener("input", function () {
-this.value = this.value.replace(/\D/g,"").slice(0,10);
+// Password Auto Uppercase
+const password = document.getElementById("password");
 
-if(this.value.length===10){
-document.getElementById("idno").focus();
-}
+password.addEventListener("input", function () {
+
+    this.value = this.value.toUpperCase();
+
 });
 
-// AADHAAR AUTO NEXT
-const aadhaar = document.getElementById("idno");
-aadhaar.addEventListener("input", function () {
-this.value = this.value.replace(/\D/g,"").slice(0,12);
-
-if(this.value.length===12){
-document.getElementById("dob").focus();
-}
-});
-
-// DOB AUTO FORMAT + NEXT
+// DOB Auto Format
 const dob = document.getElementById("dob");
+
 dob.addEventListener("input", function () {
 
-let value = this.value.replace(/\D/g,"").substring(0,8);
+    let value = this.value.replace(/\D/g, "").substring(0, 8);
 
-if(value.length>4){
-value=value.substring(0,2)+"/"+value.substring(2,4)+"/"+value.substring(4);
-}
-else if(value.length>2){
-value=value.substring(0,2)+"/"+value.substring(2);
-}
+    if (value.length > 4) {
 
-this.value=value;
+        value =
+        value.substring(0,2) + "/" +
+        value.substring(2,4) + "/" +
+        value.substring(4);
 
-if(this.value.length===10){
-document.getElementById("utr").focus();
-}
+    }
+
+    else if (value.length > 2) {
+
+        value =
+        value.substring(0,2) + "/" +
+        value.substring(2);
+
+    }
+
+    this.value = value;
 
 });
 
-// UTR
-const utr = document.getElementById("utr");
-utr.addEventListener("input", function () {
-this.value=this.value.replace(/\D/g,"").slice(0,12);
-});
+// Submit
+function sendWA() {
 
-// SUBMIT
-function sendWA(){
+    const app = appNo.value.trim();
+    const pass = password.value.trim();
+    const db = dob.value.trim();
 
-const name=nameInput.value.trim();
-const mob=mobile.value.trim();
-const ad=aadhaar.value.trim();
-const db=dob.value.trim();
-const ut=utr.value.trim();
+    if (app.length < 6) {
 
-if(name===""){
-alert("Enter Full Name");
-nameInput.focus();
-return;
-}
+        alert("Please Enter Valid Application Number");
+        appNo.focus();
+        return;
 
-if(!/^\d{10}$/.test(mob)){
-alert("Mobile Number must be exactly 10 digits");
-mobile.focus();
-return;
-}
+    }
 
-if(!/^\d{12}$/.test(ad)){
-alert("Aadhaar Number must be exactly 12 digits");
-aadhaar.focus();
-return;
-}
+    if (pass === "") {
 
-if(!/^\d{2}\/\d{2}\/\d{4}$/.test(db)){
-alert("Enter Valid DOB (DD/MM/YYYY)");
-dob.focus();
-return;
-}
+        alert("Please Enter Password");
+        password.focus();
+        return;
 
-if(!/^\d{8,12}$/.test(ut)){
-alert("UTR Number must be 8 to 12 digits");
-utr.focus();
-return;
-}
+    }
 
-const msg =
+    if (!/^\d{2}\/\d{2}\/\d{4}$/.test(db)) {
+
+        alert("Please Enter Valid DOB (DD/MM/YYYY)");
+        dob.focus();
+        return;
+
+    }
+
+    const msg =
 `🚗 *LEARNING LICENCE APPLY*
 
-👤 NAME : ${name}
-📱 MOBILE : ${mob}
-🆔 AADHAAR : ${ad}
-🎂 DOB : ${db}
-💳 UTR : ${ut}`;
+📄 Application Number
+${app}
 
-window.open(
+🔑 Password
+${pass}
+
+🎂 Date Of Birth
+${db}`;
+
+    window.open(
+
 `https://wa.me/919236414171?text=${encodeURIComponent(msg)}`,
+
 "_blank"
-);
+
+    );
 
 }
 </script>
