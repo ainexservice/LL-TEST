@@ -10,8 +10,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* PART 2 CSS YAHAN PASTE KARNA */
-  *{
+/* ========= PART 2 CSS YAHAN PASTE KARE ========= */
+ /* ========================= */
+/*      AINEX SERVICES CSS   */
+/* ========================= */
+
+*{
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -19,15 +23,23 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0052D4,#4364F7,#6FB1FC);
+background:linear-gradient(-45deg,#0f4cff,#008cff,#00c6ff,#0057ff);
+background-size:400% 400%;
+animation:bgMove 10s ease infinite;
+padding:20px;
 min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:20px;
 }
 
-/* WhatsApp Button */
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* WhatsApp */
 
 .support-btn{
 position:fixed;
@@ -38,12 +50,11 @@ height:58px;
 background:#25D366;
 border-radius:50%;
 display:flex;
-align-items:center;
 justify-content:center;
-box-shadow:0 8px 25px rgba(0,0,0,.25);
+align-items:center;
+box-shadow:0 10px 20px rgba(0,0,0,.25);
 transition:.3s;
 z-index:999;
-text-decoration:none;
 }
 
 .support-btn:hover{
@@ -60,15 +71,15 @@ fill:#fff;
 
 .card{
 width:100%;
-max-width:500px;
+max-width:520px;
 background:#fff;
-border-radius:25px;
+border-radius:22px;
 overflow:hidden;
-box-shadow:0 18px 45px rgba(0,0,0,.25);
-animation:fade .5s ease;
+box-shadow:0 20px 40px rgba(0,0,0,.25);
+animation:cardShow .5s ease;
 }
 
-@keyframes fade{
+@keyframes cardShow{
 
 from{
 opacity:0;
@@ -85,8 +96,8 @@ transform:translateY(0);
 /* Header */
 
 .header{
-background:linear-gradient(135deg,#0052D4,#007BFF);
-padding:35px 20px;
+background:linear-gradient(135deg,#0057ff,#009dff);
+padding:30px;
 text-align:center;
 color:#fff;
 }
@@ -97,38 +108,72 @@ font-weight:700;
 }
 
 .badge{
+margin-top:10px;
 display:inline-block;
-margin-top:12px;
+padding:8px 20px;
 background:#fff;
-color:#0052D4;
-padding:9px 20px;
-border-radius:50px;
-font-size:15px;
-font-weight:600;
+color:#0057ff;
+font-weight:700;
+border-radius:30px;
+}
+
+/* Animated Slider */
+
+.slider-box{
+margin:15px;
+border-radius:12px;
+overflow:hidden;
+background:linear-gradient(-45deg,#16a34a,#22c55e,#0ea5e9,#2563eb,#16a34a);
+background-size:400% 400%;
+animation:sliderBG 6s linear infinite;
+box-shadow:0 8px 15px rgba(0,0,0,.15);
+}
+
+@keyframes sliderBG{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+.slider-box marquee{
+padding:15px 0;
+color:#fff;
+font-size:17px;
+font-weight:700;
+text-shadow:1px 1px 2px rgba(0,0,0,.35);
 }
 
 /* Content */
 
 .content{
-padding:25px;
+padding:22px;
 }
 
 .content h2{
-font-size:25px;
-margin-bottom:10px;
 color:#222;
+margin-bottom:8px;
 }
 
 .content p{
 color:#666;
-line-height:1.7;
 margin-bottom:18px;
+line-height:1.7;
 }
 
 /* Price */
 
 .price{
-background:#EAFBF0;
+background:#eafbf0;
 border:2px dashed #25D366;
 padding:18px;
 border-radius:15px;
@@ -139,7 +184,6 @@ margin-bottom:20px;
 .price h3{
 font-size:42px;
 color:#25D366;
-font-weight:700;
 }
 
 .price div{
@@ -154,33 +198,29 @@ width:100%;
 padding:15px;
 margin-top:15px;
 border:2px solid #ddd;
-border-radius:12px;
+border-radius:10px;
 font-size:16px;
 outline:none;
 transition:.3s;
 }
 
 input:focus{
-border-color:#0052D4;
-box-shadow:0 0 10px rgba(0,82,212,.2);
+border-color:#0057ff;
+box-shadow:0 0 10px rgba(0,87,255,.25);
 }
 
 /* Buttons */
 
-.btn-group{
-margin-top:20px;
-}
-
 button{
 width:100%;
 padding:15px;
+margin-top:15px;
 border:none;
-border-radius:12px;
+border-radius:10px;
 font-size:17px;
 font-weight:700;
 cursor:pointer;
 transition:.3s;
-margin-top:12px;
 }
 
 #pay{
@@ -204,7 +244,7 @@ background:#18b956;
 /* Footer */
 
 .footer{
-padding:20px;
+padding:18px;
 background:#f7f7f7;
 text-align:center;
 font-size:14px;
@@ -223,20 +263,16 @@ body{
 padding:12px;
 }
 
-.header{
-padding:28px 15px;
-}
-
 .header h1{
-font-size:24px;
+font-size:25px;
 }
 
-.content h2{
-font-size:22px;
+.slider-box marquee{
+font-size:15px;
 }
 
 .price h3{
-font-size:36px;
+font-size:35px;
 }
 
 .support-btn{
@@ -249,18 +285,20 @@ width:26px;
 height:26px;
 }
 
-  }
+}
 </style>
 
 </head>
 
 <body>
 
-<!-- WhatsApp Support -->
+<!-- ===================== -->
+<!-- WhatsApp Support Button -->
+<!-- ===================== -->
+
 <a href="https://wa.me/919236414171?text=Hello%20AINEX%20SERVICES,%20I%20need%20support."
 class="support-btn"
-target="_blank"
-title="WhatsApp Support">
+target="_blank">
 
 <svg xmlns="http://www.w3.org/2000/svg"
 viewBox="0 0 32 32">
@@ -273,6 +311,10 @@ viewBox="0 0 32 32">
 
 </a>
 
+<!-- ===================== -->
+<!-- Main Card -->
+<!-- ===================== -->
+
 <div class="card">
 
 <div class="header">
@@ -280,22 +322,45 @@ viewBox="0 0 32 32">
 <h1>AINEX SERVICES</h1>
 
 <div class="badge">
-Learning Licence Apply
+🚗 Learning Licence Apply
 </div>
 
 </div>
+
+<!-- ===================== -->
+<!-- Animated Notice Slider -->
+<!-- ===================== -->
+
+<div class="slider-box">
+
+<marquee behavior="scroll"
+direction="left"
+scrollamount="5">
+
+💳 पहले ₹90 का Payment करें और Payment का Screenshot WhatsApp पर भेजें। ✅ Payment Verify होने के बाद आपका <b>Learning Licence (LL)</b> जल्द से जल्द आपके <b>WhatsApp नंबर</b> पर उपलब्ध करा दिया जाएगा। कृपया अपना WhatsApp नंबर चालू रखें।
+
+</marquee>
+
+</div>
+
+<!-- ===================== -->
+<!-- Form -->
+<!-- ===================== -->
 
 <div class="content">
 
-<h2>🚗 Learning Licence Apply</h2>
+<h2>Learning Licence Apply</h2>
 
 <p>
-Enter your Learning Licence details carefully and submit after payment.
+नीचे अपनी जानकारी सही-सही भरें।
 </p>
 
 <div class="price">
+
 <h3>₹90</h3>
+
 <div>Service Charge</div>
+
 </div>
 
 <input
@@ -318,28 +383,32 @@ maxlength="10"
 inputmode="numeric"
 placeholder="DOB (DD/MM/YYYY)">
 
-<div class="btn-group">
-
 <button id="pay">
 💳 Pay ₹90
 </button>
 
-<button id="send" onclick="sendWA()">
-📩 Submit
+<button
+id="send"
+onclick="sendWA()">
+📩 Submit Details
 </button>
 
 </div>
 
-</div>
+<!-- ===================== -->
+<!-- Footer -->
+<!-- ===================== -->
 
 <div class="footer">
 
 <p>
-Powered By <b>AINEX SERVICES</b>
+Powered By
+<b>AINEX SERVICES</b>
 </p>
 
 <p>
-WhatsApp Support : <b>9236414171</b>
+📞 WhatsApp Support :
+<b>9236414171</b>
 </p>
 
 </div>
@@ -347,10 +416,11 @@ WhatsApp Support : <b>9236414171</b>
 </div>
 
 <script>
-/* PART 3 JAVASCRIPT YAHAN PASTE KARNA */
-  // =============================
-// AINEX SERVICES - JAVASCRIPT
-// =============================
+
+/* ======= PART 3 JAVASCRIPT YAHAN PASTE KARE ======= */
+ /* ===========================
+   AINEX SERVICES JAVASCRIPT
+=========================== */
 
 // Pay Button
 document.getElementById("pay").addEventListener("click", function () {
@@ -360,104 +430,169 @@ document.getElementById("pay").addEventListener("click", function () {
 
 });
 
-// Application Number (Only Numbers)
-const appNo = document.getElementById("applicationno");
+// ===========================
+// Application Number
+// ===========================
 
-appNo.addEventListener("input", function () {
+const application = document.getElementById("applicationno");
 
-    this.value = this.value.replace(/\D/g, "").slice(0, 16);
+application.addEventListener("input", function(){
+
+    this.value = this.value.replace(/\D/g,"").slice(0,16);
 
 });
 
-// Password Auto Uppercase
+// ===========================
+// Password Uppercase
+// ===========================
+
 const password = document.getElementById("password");
 
-password.addEventListener("input", function () {
+password.addEventListener("input", function(){
 
     this.value = this.value.toUpperCase();
 
 });
 
+// ===========================
 // DOB Auto Format
+// ===========================
+
 const dob = document.getElementById("dob");
 
-dob.addEventListener("input", function () {
+dob.addEventListener("input", function(){
 
-    let value = this.value.replace(/\D/g, "").substring(0, 8);
+let value = this.value.replace(/\D/g,"").substring(0,8);
 
-    if (value.length > 4) {
+if(value.length>4){
 
-        value =
-        value.substring(0,2) + "/" +
-        value.substring(2,4) + "/" +
-        value.substring(4);
+value =
+value.substring(0,2)+"/"+
+value.substring(2,4)+"/"+
+value.substring(4);
 
-    }
+}
 
-    else if (value.length > 2) {
+else if(value.length>2){
 
-        value =
-        value.substring(0,2) + "/" +
-        value.substring(2);
+value =
+value.substring(0,2)+"/"+
+value.substring(2);
 
-    }
+}
 
-    this.value = value;
+this.value=value;
 
 });
 
+// ===========================
 // Submit
-function sendWA() {
+// ===========================
 
-    const app = appNo.value.trim();
-    const pass = password.value.trim();
-    const db = dob.value.trim();
+function sendWA(){
 
-    if (app.length < 6) {
+const app = application.value.trim();
 
-        alert("Please Enter Valid Application Number");
-        appNo.focus();
-        return;
+const pass = password.value.trim();
 
-    }
+const db = dob.value.trim();
 
-    if (pass === "") {
+if(app==""){
 
-        alert("Please Enter Password");
-        password.focus();
-        return;
+alert("Application Number Enter Kare");
 
-    }
+application.focus();
 
-    if (!/^\d{2}\/\d{2}\/\d{4}$/.test(db)) {
+return;
 
-        alert("Please Enter Valid DOB (DD/MM/YYYY)");
-        dob.focus();
-        return;
+}
 
-    }
+if(pass==""){
 
-    const msg =
+alert("Password Enter Kare");
+
+password.focus();
+
+return;
+
+}
+
+if(!/^\d{2}\/\d{2}\/\d{4}$/.test(db)){
+
+alert("DOB DD/MM/YYYY Format Me Enter Kare");
+
+dob.focus();
+
+return;
+
+}
+
+const message =
+
 `🚗 *LEARNING LICENCE APPLY*
 
-📄 Application Number
+━━━━━━━━━━━━━━
+
+📄 Application No.
 ${app}
 
-🔑 Password
+🔐 Password
 ${pass}
 
-🎂 Date Of Birth
-${db}`;
+🎂 DOB
+${db}
 
-    window.open(
+━━━━━━━━━━━━━━
 
-`https://wa.me/919236414171?text=${encodeURIComponent(msg)}`,
+✅ Payment Done`;
+
+window.open(
+
+"https://wa.me/919236414171?text="+
+encodeURIComponent(message),
 
 "_blank"
 
-    );
+);
 
 }
+
+// ===========================
+// Enter Key Support
+// ===========================
+
+document.querySelectorAll("input").forEach(function(input){
+
+input.addEventListener("keypress",function(e){
+
+if(e.key==="Enter"){
+
+sendWA();
+
+}
+
+});
+
+});
+
+// ===========================
+// Prevent Double Click
+// ===========================
+
+const sendBtn=document.getElementById("send");
+
+sendBtn.addEventListener("click",function(){
+
+sendBtn.disabled=true;
+
+setTimeout(function(){
+
+sendBtn.disabled=false;
+
+},3000);
+
+});
+
 </script>
 
 </body>
